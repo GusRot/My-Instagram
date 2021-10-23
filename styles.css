@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #E5E5E5;
+   font-family: 'Encode Sans', sans-serif;
+   font-size: 0.875rem;
+   font-weight: normal;
+}
+
+header {
+    height: 4rem;
+    background-color: #FFFFFF;
+    border:1px solid #DBDBDB;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.container {
+    height: 4rem;
+    width: 935px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    border-left: 1px solid #DBDBDB;
+    margin: 0 1rem;
+}
+
+.nav-left .logo:last-child {
+    display: none;
+}
+
+.pesquisar-input {
+    text-align: center;
+    border:1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    height: 1.75rem;
+    width: 13.5rem;
+}
+
+.instagram-logo {
+    padding-left: 1rem;
+}
+
+.logo {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 1rem;
+}
+
+main {
+    display: flex;
+    width: 935px;
+    margin: 0 auto;
+}
+
+section {
+    width: 600px;
+    margin: 2% 5% 0 0;
+}
+
+aside {
+    margin-top: 6.7rem;
+    width: 335px;
+}
+
+.aside-fixo {
+    position: fixed; 
+    width: 285px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.container-coluna div:first-child, .caixa-feed div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* SESSAO STORIES */
+.caixa-story {
+    margin-top: 4rem;
+    height: 7.4rem;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.vetor {
+    position: absolute;
+    right: 0.5rem;
+    background-color: #139EF2;
+}
+
+.caixa-story ul {
+    height: 3.5rem;
+    width: 4.9rem;
+    padding: 0 0.2rem;
+    margin: 0 0.1rem;
+}
+
+.caixa-story li {
+    font-size: 0.75rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.caixa-story li:first-child {
+    background: url(assets/stories_background\ 3.png);
+    background-position: center;
+    height: 4.125rem;
+    width: 4.125rem;
+}
+
+.stories {
+    height: 3.8rem;
+    width: 3.55rem;
+    border-radius: 0px;
+    padding-top: 0.32rem;
+}
+/* SESSAO FEED */
+.caixa-feed {
+    border-radius: 3px;
+    margin: 4% 0;
+    padding: 2% 0;
+    background-color: #FFFFFF;
+}
+
+.imagem-pessoa {
+    width: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    border-radius: 28px;
+}
+
+.nome-pessoa {
+    font-weight: 700;
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #262626;
+}
+
+.pontos {
+    margin: auto 1rem;
+    font-weight: bold;
+}
+
+.img-principal {
+    width: 100%;
+    padding: 0.35rem 0;
+}
+
+.curtidas {
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+}
+
+.quem-curtiu {
+    width: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.3rem;
+}
+
+/* SESSAO Sugestoes */
+.sugestao-imagem {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-right: 1.1rem;
+    border-radius: 28px;
+}
+
+.container-coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-coluna div:first-child {
+    margin-bottom: 0.1rem;
+}
+
+.sugerir-pessoa {
+    margin: auto 0;
+}
+
+.sugestoes h2 {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #8E8E8E;
+}
+
+.sugestoes p {
+    font-size: 0.75rem;
+    color: #262626;
+    font-weight: 500;
+}
+
+.container-coluna p {
+    font-size: 0.75rem;
+    margin: 0.2rem 0;
+    color: #8E8E8E;
+}
+
+.container-coluna span {
+    font-size: 0.7rem;
+    margin: 0.75rem 0;
+    color: #C7C7C7;
+}
+
+.seguir {
+    font-weight: 500;
+    color: #139EF2;
+    font-size: 0.75rem;
+}
+
+.flex-padding {
+    display: flex;
+    padding: 2% 0;
+}
+
+.sugestoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+
+@media(max-width:935px) {
+    .container {
+        width: 96%;
+        margin: 0 2%;
+    }
+    
+    main {
+        width: 600px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    section {
+        width: 600px;
+        margin: 2% auto
+    }
+}
+
+@media(max-width:614px) {
+    
+    main {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .pesquisar-input {
+        display: none;
+    }
+
+    .nav-right:nth-child(n) {
+        display: none;
+    }
+  
+    .nav-left .logo:last-child {
+        display:initial;
+    }
+
+    .nav-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .border {
+        border-left: none;
+        margin: 0;
+    }
+
+    .caixa-story {
+        background-color: #E5E5E5;
+    }
+}
