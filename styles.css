@@ -9,34 +9,34 @@ body {
    font-weight: normal;
 }
 
-header {
-    height: 4rem;
+header {  /* Borda do header tem largura total  e fixa na pagina*/
+    height: 3.3rem;
     background-color: #FFFFFF;
     border:1px solid #DBDBDB;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 1;
 }
 
-.container {
-    height: 4rem;
+.container {  /* limitar o tamanho do conteudo e espaçamento */
+    height: 3.3rem;
     width: 935px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-
-.container div {
-    display: flex;
     align-items: center;
 }
 
-.border {
+.container div { /* logo do instagram ao lado da Div separadora */
+    display: flex;
+}
+
+.border { 
     border-left: 1px solid #DBDBDB;
     margin: 0 1rem;
 }
 
-.nav-left .logo:last-child {
+.nav-left .logo:last-child { /* Só aparece na versão mobile */
     display: none;
 }
 
@@ -49,33 +49,42 @@ header {
     width: 13.5rem;
 }
 
-.instagram-logo {
+.instagram-logo { /* Espaçar da borda da DIV */
     padding-left: 1rem;
 }
 
-.logo {
+.logo { /* Tamanho padrao de todos os icones */
     height: 1.5rem;
     width: 1.5rem;
     padding-left: 1rem;
 }
 
-main {
+.logo2 {
+    height: 0.875rem;
+    width: 0.875rem;
+}
+
+ .padding {
+     padding: 0 1rem;
+ }
+
+main { /* limitar o tamanho do conteudo */
     display: flex;
     width: 935px;
     margin: 0 auto;
 }
 
-section {
+section { /* limitar o tamanho do conteudo */
     width: 600px;
     margin: 2% 5% 0 0;
 }
 
-aside {
-    margin-top: 6.7rem;
+aside { /* limitar o tamanho do conteudo */
+    margin-top: 5.7rem;
     width: 335px;
 }
 
-.aside-fixo {
+.aside-fixo { /* Fixar na tela */
     position: fixed; 
     width: 285px;
 }
@@ -84,15 +93,19 @@ strong {
     font-weight: 700;
 }
 
-.container-coluna div:first-child, .caixa-feed div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+footer { /*oculto na versão web*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0rem;
+    background-color: #FFFFFF;
+    border:1px solid #DBDBDB;
 }
 /* SESSAO STORIES */
 .caixa-story {
-    margin-top: 4rem;
-    height: 7.4rem;
+    margin-top: 3rem;
+    height: 7.3rem;
     background-color: #FFFFFF;
     border-radius: 3px;
     display: flex;
@@ -105,12 +118,11 @@ strong {
 .vetor {
     position: absolute;
     right: 0.5rem;
+    filter: drop-shadow(-1px 1px 2px rgba(0,0,0,0.3));
 }
 
 .caixa-story ul {
-    height: 3.5rem;
-    width: 4.9rem;
-    padding: 0 0.2rem;
+    padding: 0 0.25rem;
     margin: 0 0.1rem;
 }
 
@@ -136,9 +148,15 @@ strong {
 /* SESSAO FEED */
 .caixa-feed {
     border-radius: 3px;
-    margin: 4% 0;
+    margin: 1rem 0 1rem 0;
     padding: 2% 0;
     background-color: #FFFFFF;
+}
+
+.container-coluna div:first-child, .caixa-feed div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .imagem-pessoa {
@@ -162,7 +180,24 @@ strong {
 
 .img-principal {
     width: 100%;
+    height: 600px;
+    object-fit: cover;
     padding: 0.35rem 0;
+}
+
+.video-container{
+  width:600px;
+  height:600px;
+  overflow:hidden;
+  position:relative;
+}
+
+.video-container iframe{
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 120px);
 }
 
 .curtidas {
@@ -176,6 +211,53 @@ strong {
     margin-right: 0.3rem;
 }
 
+.mostrar-comentario {
+    color: #8E8E8E;
+    padding-left: 1rem;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+
+.mostrar-horas {
+    color: #8E8E8E;
+    padding-left: 1rem;
+    margin-top: 0.2rem;
+    font-size: 0.75rem;
+}
+
+.comentar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-comentario {
+    margin-top: 1rem;
+    width: 100%;
+    padding-left: 1rem;
+    border:1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    height: 2rem;
+    display: inline-block;
+    font-size: 0.875rem;
+}
+
+.send-comentario {
+    color: #B2DFFC;
+    border: none;
+    background-color: #FFFFFF;
+    position: absolute;
+    height: 1.2rem;
+    right: 0.4rem;
+    font-size: 0.875rem;
+    bottom: 0.4rem;
+}
+
+.send-comentario:hover {
+    transition: 0.300ms;
+    color: #0095F6;
+}
 /* SESSAO Sugestoes */
 .sugestao-imagem {
     height: 3.5rem;
@@ -242,32 +324,35 @@ strong {
 
 
 @media(max-width:935px) {
-    .container {
+    .container { /* A partir desse tamanho de tela pode reduzir  suas medidas em relação a tela do usuário*/
         width: 96%;
         margin: 0 2%;
     }
     
-    main {
+    main { 
         width: 600px;
     }
 
-    aside {
+    aside { /*Não é necessario a partir dessa dimensao de tela*/
         display: none;
     }
 
-    section {
+    section { /*Limitar os posts e centralizar*/
         width: 600px;
         margin: 2% auto
     }
 }
 
 @media(max-width:614px) {
+    header {
+        height: 4rem;
+    }
     
     main {
         width: 100%;
     }
 
-    section {
+    section { /*Preencher a tela do usuário de acordo com o tamanho da tela*/
         width: 100%;
     }
 
@@ -297,4 +382,20 @@ strong {
     .caixa-story {
         background-color: #E5E5E5;
     }
+
+    footer .logo {
+        padding-left: 0;
+    }
+
+    footer {
+        width: 100%;
+        height: 3.7rem;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between; 
+        padding: 0.9rem 1.5rem;
+    }
 }
+
