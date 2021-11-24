@@ -9,7 +9,7 @@ body {
    font-weight: normal;
 }
 
-header {  /* Borda do header tem largura total  e fixa na pagina*/
+header {  
     height: 3.3rem;
     background-color: #FFFFFF;
     border:1px solid #DBDBDB;
@@ -18,7 +18,7 @@ header {  /* Borda do header tem largura total  e fixa na pagina*/
     z-index: 1;
 }
 
-.container {  /* limitar o tamanho do conteudo e espaçamento */
+.container {  
     height: 3.3rem;
     width: 935px;
     margin: 0 auto;
@@ -27,7 +27,7 @@ header {  /* Borda do header tem largura total  e fixa na pagina*/
     align-items: center;
 }
 
-.container div { /* logo do instagram ao lado da Div separadora */
+.container div { 
     display: flex;
 }
 
@@ -49,51 +49,64 @@ header {  /* Borda do header tem largura total  e fixa na pagina*/
     width: 13.5rem;
 }
 
-.instagram-logo { /* Espaçar da borda da DIV */
+.instagram-logo { 
     padding-left: 1rem;
+    cursor: pointer;
 }
 
-.logo { /* Tamanho padrao de todos os icones */
+.logo { 
     height: 1.5rem;
     width: 1.5rem;
     padding-left: 1rem;
+    cursor: pointer;
 }
 
 .logo2 {
     height: 0.875rem;
     width: 0.875rem;
+    cursor: pointer;
+}
+
+.curtir {
+    height: 0.85rem;
+    width: 0.85rem;
+    margin-right: 0.1rem;
+    cursor: pointer;
+    display: none;
 }
 
  .padding {
      padding: 0 1rem;
+     padding-bottom: 0.35rem;
  }
 
-main { /* limitar o tamanho do conteudo */
+main { 
     display: flex;
     width: 935px;
     margin: 0 auto;
 }
 
-section { /* limitar o tamanho do conteudo */
+section { 
     width: 600px;
     margin: 2% 5% 0 0;
 }
 
-aside { /* limitar o tamanho do conteudo */
+aside { 
     margin-top: 5.7rem;
     width: 335px;
 }
 
-.aside-fixo { /* Fixar na tela */
+.aside-fixo { 
     position: fixed; 
     width: 285px;
 }
 
 strong {
     font-weight: 700;
+    cursor: pointer;
 }
 
-footer { /*oculto na versão web*/
+.cel-nav { /*oculto na versão web*/
     width: 0;
     height: 0;
     overflow: hidden;
@@ -143,6 +156,7 @@ footer { /*oculto na versão web*/
     height: 3.8rem;
     width: 3.55rem;
     border-radius: 0px;
+    cursor: pointer;
     padding-top: 0.32rem;
 }
 /* SESSAO FEED */
@@ -171,10 +185,12 @@ footer { /*oculto na versão web*/
     display: inline-block;
     font-size: 0.875rem;
     color: #262626;
+    cursor: pointer;
 }
 
 .pontos {
     margin: auto 1rem;
+    cursor: pointer;
     font-weight: bold;
 }
 
@@ -216,7 +232,10 @@ footer { /*oculto na versão web*/
     padding-left: 1rem;
     margin: 0.25rem 0;
     font-size: 1rem;
+    cursor: pointer;
 }
+
+
 
 .mostrar-horas {
     color: #8E8E8E;
@@ -252,6 +271,7 @@ footer { /*oculto na versão web*/
     right: 0.4rem;
     font-size: 0.875rem;
     bottom: 0.4rem;
+    cursor: pointer;
 }
 
 .send-comentario:hover {
@@ -307,6 +327,7 @@ footer { /*oculto na versão web*/
     font-weight: 500;
     color: #139EF2;
     font-size: 0.75rem;
+    cursor: pointer;
 }
 
 .flex-padding {
@@ -324,7 +345,7 @@ footer { /*oculto na versão web*/
 
 
 @media(max-width:935px) {
-    .container { /* A partir desse tamanho de tela pode reduzir  suas medidas em relação a tela do usuário*/
+    .container { 
         width: 96%;
         margin: 0 2%;
     }
@@ -333,11 +354,11 @@ footer { /*oculto na versão web*/
         width: 600px;
     }
 
-    aside { /*Não é necessario a partir dessa dimensao de tela*/
+    aside { 
         display: none;
     }
 
-    section { /*Limitar os posts e centralizar*/
+    section { 
         width: 600px;
         margin: 2% auto
     }
@@ -352,7 +373,7 @@ footer { /*oculto na versão web*/
         width: 100%;
     }
 
-    section { /*Preencher a tela do usuário de acordo com o tamanho da tela*/
+    section { 
         width: 100%;
     }
 
@@ -383,16 +404,16 @@ footer { /*oculto na versão web*/
         background-color: #E5E5E5;
     }
 
-    footer .logo {
+    .cel-nav .logo {
         padding-left: 0;
     }
 
-    footer {
+    .cel-nav {
         width: 100%;
         height: 3.7rem;
     }
 
-    .footer {
+    .cel-nav .nav {
         display: flex;
         justify-content: space-between; 
         padding: 0.9rem 1.5rem;

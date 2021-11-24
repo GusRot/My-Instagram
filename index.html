@@ -14,19 +14,19 @@
 </head>
 
 <body>
-    <header>  <!-- Borda do header tem largura total  e fixa na pagina -->
-        <div class="container"> <!-- Logos e barra de pesquisa-->
-            <div class="nav-left"> <!-- Logos da esquerda e unica div aparente na versão mobile-->
+    <header> 
+        <div class="container"> 
+            <div class="nav-left"> 
                 <ion-icon style="padding: 0;" class="logo" name="logo-instagram"></ion-icon>
-                <div class = "border"> <!--Apenas para borda-->
+                <div class = "border"> 
                     <img class="instagram-logo" src="assets/logo.png">
                 </div>
-                <ion-icon class="logo" name="paper-plane-outline"></ion-icon> <!--Oculto o outro paper-plane na versão mobile para facilitar o justify-content com esta div-->
+                <ion-icon class="logo" name="paper-plane-outline"></ion-icon> 
             </div>
-            <div><!--Oculto na versao mobile-->
+            <div>
                 <input class ="pesquisar-input" type="text" id="pesquisar" placeholder="Pesquisar">
             </div>
-            <div class="nav-right"> <!-- Logos da direita - Ocultos em mobile-->
+            <div class="nav-right">
                 <ion-icon class="logo" name="paper-plane-outline"></ion-icon>
                 <ion-icon class="logo" name="compass-outline"></ion-icon>
                 <ion-icon class="logo" name="heart-outline"></ion-icon>
@@ -39,7 +39,7 @@
         <section>
             <div class="caixa-story"> <!-- STORIES -->
                 <img src="assets/Vector.png" class="vetor">
-                <ul> <!-- Lista para Imagem acompanhar texto(nome)-->
+                <ul> 
                     <li><img class="stories" src="assets/meowed 1.png"></li>
                     <li>Meowed</li>
                 </ul>
@@ -74,8 +74,8 @@
             </div>
             <!-- MODELO FEED -->
             <div class="caixa-feed">
-                <div> <!-- Todas as divs do "caixa-feed" com Flex e espaçamento -->
-                    <div class="padding"> <!-- Parte superior do post -->
+                <div>
+                    <div class="padding"> 
                         <img class="imagem-pessoa" src="assets/meowed 1.png">
                         <h2 class="nome-pessoa">Meowed</h2>
                     </div>
@@ -99,21 +99,23 @@
                 </div>
                 <!-- Sessão de comentários -->
                 <p class="mostrar-comentario">Ver todos os comentários</p>
-                <!-- precisei tirar o space between -->
-                <div class="padding" style="padding-bottom: 0.35rem;" >
+
+                <div class="padding">
                     <p><strong>Lucifer Morningstar</strong> Que fofinhooo</p>
                     <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                    <p class="curtir">❤️</p>
                 </div>
-                <div style="padding-bottom: 0.35rem;" class="padding">
+                <div class="padding">
                     <p><strong>Amenadiel</strong> ❤️❤️</p>
                     <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                    <p class="curtir">❤️</p>
                 </div>
                 
                 <p class="mostrar-horas">Há 15 horas</p>
 
                 <div class="comentar">
                     <input class="input-comentario" type="text" placeholder="Adicione um comentário">
-                        <input class = "send-comentario" type = "submit" value="Publicar"> 
+                    <input class = "send-comentario" type = "submit" value="Publicar" onclick="adicionarComentario()"> 
                 </div> 
             <!-- Sessão de comentários FIM-->
             </div>
@@ -144,21 +146,23 @@
                 </div>
                  <!-- Sessão de comentários -->
                  <p class="mostrar-comentario">Ver todos os 301 comentários</p>
-                 <!-- precisei tirar o space between -->
-                 <div class="padding" style="padding-bottom: 0.35rem;" >
+
+                 <div class="padding">
                      <p><strong>Patricia Holanda</strong> 😂😂😂😂</p>
                      <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                     <p class="curtir">❤️</p>
                  </div>
-                 <div style="padding-bottom: 0.35rem;" class="padding">
+                 <div class="padding">
                      <p><strong>Rui Patricio</strong> Genial!</p>
                      <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                     <p class="curtir">❤️</p>
                  </div>
                  
-                 <p class="mostrar-horas">Há 15 horas</p>
+                 <p class="mostrar-horas">Há 18 horas</p>
  
                  <div class="comentar">
-                     <input class="input-comentario" type="text" placeholder="Adicione um comentário">
-                         <input class = "send-comentario" type = "submit" value="Publicar"> 
+                    <input class="input-comentario" type="text" placeholder="Adicione um comentário">
+                    <input class = "send-comentario" type = "submit" value="Publicar"> 
                  </div> 
              <!-- Sessão de comentários FIM-->
             </div>
@@ -188,23 +192,24 @@
                 </div>
                  <!-- Sessão de comentários -->
                  <p class="mostrar-comentario">Ver todos os 122 comentários</p>
-                 <!-- precisei tirar o space between -->
-                 <div class="padding" style="padding-bottom: 0.35rem;" >
+         
+                 <div class="padding">
                      <p><strong>Petterson Santos</strong> Muito Bom!!</p>
                      <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                     <p class="curtir">❤️</p>
                  </div>
-                 <div style="padding-bottom: 0.35rem;" class="padding">
+                 <div class="padding">
                      <p><strong>Roberto Costa</strong> 😂😂😂😂</p>
                      <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                     <p class="curtir">❤️</p>
                  </div>
                  
-                 <p class="mostrar-horas">Há 15 horas</p>
+                 <p class="mostrar-horas">Há 20 horas</p>
  
                  <div class="comentar">
-                     <input class="input-comentario" type="text" placeholder="Adicione um comentário">
-                         <input class = "send-comentario" type = "submit" value="Publicar"> 
+                    <input class="input-comentario" type="text" placeholder="Adicione um comentário">
+                    <input class = "send-comentario" type = "submit" value="Publicar"> 
                  </div> 
-             <!-- Sessão de comentários FIM-->
             </div>
             <!-- POSTS COM HTML COPIADOS DO MODELO -->
 
@@ -314,15 +319,15 @@
         </aside>
     </main>
 
-    <footer> <!-- Só é visivel na versão mobile -->
-        <div class="footer">
+    <div class="cel-nav"> 
+        <div class="nav">
             <ion-icon class="logo" name="home-outline"></ion-icon>
             <ion-icon class="logo" name="search-outline"></ion-icon>
             <ion-icon class="logo" name="add-circle-outline"></ion-icon>
             <ion-icon class="logo" name="heart-outline"></ion-icon>
             <ion-icon class="logo" name="person-outline"></ion-icon>
         </div>
-    </footer>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> <!-- carrega os icones utilizados-->
 </body>
 </html>
