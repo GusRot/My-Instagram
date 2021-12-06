@@ -1,5 +1,32 @@
-function adicionarComentario() {}
+function adicionarComentario(button) {
+    const inputButton = button.parentNode.firstElementChild;
+    const comment = inputButton.value;
+    const supportSection = button.parentNode.parentNode;
+    supportSection.classList.add("active");
 
+    const commentSection = document.querySelector(".active .comment-section");
+
+    commentSection.innerHTML += `<div class="padding">
+            <p><strong>${username}</strong> ${comment}</p>
+            <ion-icon class="logo2" name="heart-outline"></ion-icon>
+            <p class="curtir">❤️</p>
+        </div>
+    `;
+    inputButton.value = "";
+    supportSection.classList.remove("active");
+}
+
+function curtirComentario() {}
+
+const username = "Gustavo";
+const time = getRandomInt(1, 4);
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+const time2 = time + getRandomInt(1, 4);
+const time3 = time2 + getRandomInt(1, 4);
 const stories = [
     {
         img: "https://bn02pap001files.storage.live.com/y4miyXMbccm13byjHAdVXtLSYeU00b6pE_jzh-rHg5EAcJ75VDb1-QUxMAfQQ-o14UvzIe-XAqhctNQI8DjNh8yYHXVZV-N_UxDEefiQmruj9ILkKQsJ6RUNuK2WczqDskvK5nZOI-EyFduJKTbCJ17gvvFxOTNC-MbOjpzPPeB1uB4ZPLvXDoB0AWIuY-Micig?width=56&height=56&cropmode=none",
@@ -34,7 +61,7 @@ const stories = [
         name: "ETET",
     },
 ];
-
+console.log(time);
 const posts = [
     {
         img: "https://bn02pap001files.storage.live.com/y4miyXMbccm13byjHAdVXtLSYeU00b6pE_jzh-rHg5EAcJ75VDb1-QUxMAfQQ-o14UvzIe-XAqhctNQI8DjNh8yYHXVZV-N_UxDEefiQmruj9ILkKQsJ6RUNuK2WczqDskvK5nZOI-EyFduJKTbCJ17gvvFxOTNC-MbOjpzPPeB1uB4ZPLvXDoB0AWIuY-Micig?width=56&height=56&cropmode=none",
@@ -45,14 +72,14 @@ const posts = [
         likedimg:
             "https://bn02pap001files.storage.live.com/y4m8yfvCUSj448lFZbcDcVQF0i4MqUMHhF-2qMGld1-KOmyLdgpB4mEScF6GOleodC7JIxLwv3rxeBov-jVm4f_QF85uQA70ARprNdTGQdYpyaGik_h5ZpbVFzamt8SCV4M30KRcXbcg1bin4GW5AfoS1-_aNlesy0ifWCM1kDClYk8I8VLNUnS-V7KitdlnSPf?width=32&height=32&cropmode=none",
         likedname: "Chloe Decker",
-        qtd: "295",
+        qtd: `${(Math.random() * 1000).toFixed(0)}`,
         comments: {
             name: "Lucifer Morningstar",
             text: "Que fofinhooo",
             name2: "Amenadiel",
             text2: "❤️❤️",
-            time: "15",
-            qtd: "300",
+            time: time,
+            qtd: `${(Math.random() * 1000).toFixed(0)}`,
         },
     },
     {
@@ -64,14 +91,14 @@ const posts = [
         likedimg:
             "https://bn02pap001files.storage.live.com/y4m7LA1wrJEOSMBd0dRIRG6u1SgeHWN2Q36wSDtWeQREnRcpR8TA1_aiBFk-jqBAvoRG31zjveZgyR8Xo3U4jXRAfVmP9Vc_0dEdtiCMIRVAyGZ0VDp8mvZ61c7PH_GnrYs9FPANKEt7jwLI___-jjLLNSI1-hGVCwmVJkMjHpA1JJZb10wTUfqXsVUQwdKS3To?width=56&height=56&cropmode=none",
         likedname: "José Pedro",
-        qtd: "999",
+        qtd: `${(Math.random() * 1000).toFixed(0)}`,
         comments: {
             name: "Patricia Holanda",
             text: "😂😂😂😂",
             name2: "Raí Patricio",
             text2: "Genial!",
-            time: "17",
-            qtd: "300",
+            time: time2,
+            qtd: `${(Math.random() * 1000).toFixed(0)}`,
         },
     },
     {
@@ -79,17 +106,18 @@ const posts = [
         name: "Gustavo Rotta",
         type: "video",
         post: "https://www.youtube.com/embed/5Z5Oh3SbPWQ?autoplay=1&mute=1&controls=1&loop=1&playlist=5Z5Oh3SbPWQ",
+        title: "avengers-video",
         likedimg:
             "https://bn02pap001files.storage.live.com/y4mviNm1cpPPQ0Gn2trTZzPb34d1oxoNw8tMBRen44Qs4dIG0C1rtDk6OQJFU62LuOyZlArpLOKVhUUbLOTtgmxGUAph7RZQBhK0U94J8gu7Gq9tzmUFDa4ToA4fb3o_OxFw7IWnFopwFbpniCt6vEAe5iqe4g61HdGDi1VPvHr85a8wOMHbu1KQ_yWpclqC7nV?width=56&height=56&cropmode=none",
         likedname: "José Paulo",
-        qtd: "842",
+        qtd: `${(Math.random() * 1000).toFixed(0)}`,
         comments: {
             name: "Petterson Santos",
             text: "Muito Bom!!",
             name2: "Roberto Costa",
             text2: "😂😂😂😂",
-            time: "19",
-            qtd: "400",
+            time: time3,
+            qtd: `${(Math.random() * 1000).toFixed(0)}`,
         },
     },
 ];
@@ -154,22 +182,23 @@ window.onload = function () {
                 
                 <p class="mostrar-comentario">Ver todos os ${posts[i].comments.qtd} comentários</p>
 
-                <div class="padding">
-                    <p><strong>${posts[i].comments.name}</strong> ${posts[i].comments.text}</p>
-                    <ion-icon class="logo2" name="heart-outline"></ion-icon>
-                    <p class="curtir">❤️</p>
-                </div>
-                <div class="padding">
-                    <p><strong>${posts[i].comments.name2}</strong> ${posts[i].comments.text2}</p>
-                    <ion-icon class="logo2" name="heart-outline"></ion-icon>
-                    <p class="curtir">❤️</p>
-                </div>
-                
+                <section class="comment-section">
+                    <div class="padding teste">
+                        <p><strong>${posts[i].comments.name}</strong> ${posts[i].comments.text}</p>
+                        <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                        <p class="curtir">❤️</p>
+                    </div>
+                    <div class="padding teste">
+                        <p><strong>${posts[i].comments.name2}</strong> ${posts[i].comments.text2}</p>
+                        <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                        <p class="curtir">❤️</p>
+                    </div>
+                </section>
                 <p class="mostrar-horas">Há ${posts[i].comments.time} horas</p>
 
                 <div class="comentar">
                     <input class="input-comentario" type="text" placeholder="Adicione um comentário">
-                    <input class = "send-comentario" type = "submit" value="Publicar" onclick="adicionarComentario()"> 
+                    <input class = "send-comentario" type = "submit" value="Publicar" onclick="adicionarComentario(this)"> 
                 </div> 
             </div> 
             `;
@@ -204,22 +233,24 @@ window.onload = function () {
                 
                 <p class="mostrar-comentario">Ver todos os ${posts[i].comments.qtd} comentários</p>
 
-                <div class="padding">
-                    <p><strong>${posts[i].comments.name}</strong> ${posts[i].comments.text}</p>
-                    <ion-icon class="logo2" name="heart-outline"></ion-icon>
-                    <p class="curtir">❤️</p>
-                </div>
-                <div class="padding">
-                    <p><strong>${posts[i].comments.name2}</strong> ${posts[i].comments.text2}</p>
-                    <ion-icon class="logo2" name="heart-outline"></ion-icon>
-                    <p class="curtir">❤️</p>
-                </div>
+                <section class="comment-section">
+                    <div class="padding">
+                        <p><strong>${posts[i].comments.name}</strong> ${posts[i].comments.text}</p>
+                        <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                        <p class="curtir">❤️</p>
+                    </div>
+                    <div class="padding">
+                        <p><strong>${posts[i].comments.name2}</strong> ${posts[i].comments.text2}</p>
+                        <ion-icon class="logo2" name="heart-outline"></ion-icon>
+                        <p class="curtir">❤️</p>
+                    </div>
+                </section>
                 
                 <p class="mostrar-horas">Há ${posts[i].comments.time} horas</p>
 
                 <div class="comentar">
                     <input class="input-comentario" type="text" placeholder="Adicione um comentário">
-                    <input class = "send-comentario" type = "submit" value="Publicar" onclick="adicionarComentario()"> 
+                    <input class = "send-comentario" type = "submit" value="Publicar" onclick="adicionarComentario(this)"> 
                 </div> 
             </div> 
             `;

@@ -177,6 +177,13 @@ strong {
     align-items: center;
 }
 
+.comment-section .padding {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .imagem-pessoa {
     width: 2rem;
     width: 2rem;
