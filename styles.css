@@ -3,22 +3,22 @@
 }
 
 body {
-   background-color: #E5E5E5;
-   font-family: 'Encode Sans', sans-serif;
-   font-size: 0.875rem;
-   font-weight: normal;
+    background-color: #e5e5e5;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 0.875rem;
+    font-weight: normal;
 }
 
-header {  
+header {
     height: 3.3rem;
-    background-color: #FFFFFF;
-    border:1px solid #DBDBDB;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
-.container {  
+.container {
     height: 3.3rem;
     width: 935px;
     margin: 0 auto;
@@ -27,34 +27,35 @@ header {
     align-items: center;
 }
 
-.container div { 
+.container div {
     display: flex;
 }
 
-.border { 
-    border-left: 1px solid #DBDBDB;
+.border {
+    border-left: 1px solid #dbdbdb;
     margin: 0 1rem;
 }
 
-.nav-left .logo:last-child { /* Só aparece na versão mobile */
+.nav-left .logo:last-child {
+    /* Só aparece na versão mobile */
     display: none;
 }
 
 .pesquisar-input {
     text-align: center;
-    border:1px solid #DBDBDB;
+    border: 1px solid #dbdbdb;
     border-radius: 3px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: 1.75rem;
     width: 13.5rem;
 }
 
-.instagram-logo { 
+.instagram-logo {
     padding-left: 1rem;
     cursor: pointer;
 }
 
-.logo { 
+.logo {
     height: 1.5rem;
     width: 1.5rem;
     padding-left: 1rem;
@@ -75,29 +76,29 @@ header {
     display: none;
 }
 
- .padding {
-     padding: 0 1rem;
-     padding-bottom: 0.35rem;
- }
+.padding {
+    padding: 0 1rem;
+    padding-bottom: 0.35rem;
+}
 
-main { 
+main {
     display: flex;
     width: 935px;
     margin: 0 auto;
 }
 
-section { 
+section {
     width: 600px;
     margin: 2% 5% 0 0;
 }
 
-aside { 
+aside {
     margin-top: 5.7rem;
     width: 335px;
 }
 
-.aside-fixo { 
-    position: fixed; 
+.aside-fixo {
+    position: fixed;
     width: 285px;
 }
 
@@ -106,20 +107,21 @@ strong {
     cursor: pointer;
 }
 
-.cel-nav { /*oculto na versão web*/
+.cel-nav {
+    /*oculto na versão web*/
     width: 0;
     height: 0;
     overflow: hidden;
     position: fixed;
     bottom: 0rem;
-    background-color: #FFFFFF;
-    border:1px solid #DBDBDB;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
 }
 /* SESSAO STORIES */
 .caixa-story {
     margin-top: 3rem;
     height: 7.3rem;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -131,7 +133,7 @@ strong {
 .vetor {
     position: absolute;
     right: 0.5rem;
-    filter: drop-shadow(-1px 1px 2px rgba(0,0,0,0.3));
+    filter: drop-shadow(-1px 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 .caixa-story ul {
@@ -158,16 +160,25 @@ strong {
     border-radius: 0px;
     cursor: pointer;
     padding-top: 0.32rem;
+    border-radius: 50%;
 }
 /* SESSAO FEED */
 .caixa-feed {
     border-radius: 3px;
     margin: 1rem 0 1rem 0;
     padding: 2% 0;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
-.container-coluna div:first-child, .caixa-feed div {
+.container-coluna div:first-child,
+.caixa-feed div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-section .padding {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,19 +212,19 @@ strong {
     padding: 0.35rem 0;
 }
 
-.video-container{
-  width:600px;
-  height:600px;
-  overflow:hidden;
-  position:relative;
+.video-container {
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
 }
 
-.video-container iframe{
-  position: absolute;
-  top: -140px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 120px);
+.video-container iframe {
+    position: absolute;
+    top: -140px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 120px);
 }
 
 .curtidas {
@@ -228,17 +239,15 @@ strong {
 }
 
 .mostrar-comentario {
-    color: #8E8E8E;
+    color: #8e8e8e;
     padding-left: 1rem;
     margin: 0.25rem 0;
     font-size: 1rem;
     cursor: pointer;
 }
 
-
-
 .mostrar-horas {
-    color: #8E8E8E;
+    color: #8e8e8e;
     padding-left: 1rem;
     margin-top: 0.2rem;
     font-size: 0.75rem;
@@ -254,18 +263,18 @@ strong {
     margin-top: 1rem;
     width: 100%;
     padding-left: 1rem;
-    border:1px solid #DBDBDB;
+    border: 1px solid #dbdbdb;
     border-radius: 3px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: 2rem;
     display: inline-block;
     font-size: 0.875rem;
 }
 
 .send-comentario {
-    color: #B2DFFC;
+    color: #b2dffc;
     border: none;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     position: absolute;
     height: 1.2rem;
     right: 0.4rem;
@@ -275,8 +284,8 @@ strong {
 }
 
 .send-comentario:hover {
-    transition: 0.300ms;
-    color: #0095F6;
+    transition: 0.3ms;
+    color: #0095f6;
 }
 /* SESSAO Sugestoes */
 .sugestao-imagem {
@@ -302,7 +311,7 @@ strong {
 .sugestoes h2 {
     font-weight: 500;
     font-size: 0.75rem;
-    color: #8E8E8E;
+    color: #8e8e8e;
 }
 
 .sugestoes p {
@@ -314,18 +323,19 @@ strong {
 .container-coluna p {
     font-size: 0.75rem;
     margin: 0.2rem 0;
-    color: #8E8E8E;
+    color: #8e8e8e;
 }
 
-.container-coluna span {
+.aside-fixo span {
     font-size: 0.7rem;
-    margin: 0.75rem 0;
-    color: #C7C7C7;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    color: #c7c7c7;
 }
 
 .seguir {
     font-weight: 500;
-    color: #139EF2;
+    color: #139ef2;
     font-size: 0.75rem;
     cursor: pointer;
 }
@@ -343,37 +353,36 @@ strong {
     margin-bottom: 3%;
 }
 
-
-@media(max-width:935px) {
-    .container { 
+@media (max-width: 935px) {
+    .container {
         width: 96%;
         margin: 0 2%;
     }
-    
-    main { 
+
+    main {
         width: 600px;
     }
 
-    aside { 
+    aside {
         display: none;
     }
 
-    section { 
+    section {
         width: 600px;
-        margin: 2% auto
+        margin: 2% auto;
     }
 }
 
-@media(max-width:614px) {
+@media (max-width: 614px) {
     header {
         height: 4rem;
     }
-    
+
     main {
         width: 100%;
     }
 
-    section { 
+    section {
         width: 100%;
     }
 
@@ -384,9 +393,9 @@ strong {
     .nav-right:nth-child(n) {
         display: none;
     }
-  
+
     .nav-left .logo:last-child {
-        display:initial;
+        display: initial;
     }
 
     .nav-left {
@@ -401,7 +410,7 @@ strong {
     }
 
     .caixa-story {
-        background-color: #E5E5E5;
+        background-color: #e5e5e5;
     }
 
     .cel-nav .logo {
@@ -415,8 +424,7 @@ strong {
 
     .cel-nav .nav {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         padding: 0.9rem 1.5rem;
     }
 }
-
