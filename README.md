@@ -1,6 +1,8 @@
+###  Version README [ENGLISH](./README-en.md) 
+
 # Replica-Instagram
 
-Realizei a réplica do Instagram com a finalidade de treino das habilidades front-end (HTML / CSS /JS)
+Realizei a réplica do Instagram com a finalidade de treino das habilidades front-end
 
 [Acesse aqui](https://gusrot.github.io/My-Instagram/)
 
